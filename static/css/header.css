@@ -500,4 +500,7 @@ only screen and (max-device-aspect-ratio: 2/3) {
 	.footer {
 		font-size: 1.6em;
 	}
+	.secondary-menu li div {
+		font-size: 1.5em;
+	}
 }
