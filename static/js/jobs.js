@@ -1,7 +1,8 @@
 $(document).ready(function(){
 	let jobs_height = [];
+	let em = parseInt($('html').css('font-size'));
 	$('.job-item-info').each(function(){
-		jobs_height.push($(this).outerHeight(true) + 16*5);
+		jobs_height.push($(this).outerHeight(true) + em*5);
 		$(this).css('height', '0');
 		$(this).css('padding', '0');
 	});
