@@ -494,4 +494,10 @@ only screen and (max-device-aspect-ratio: 2/3) {
 	.close-menu i {
 		font-size: 1.8em;
 	}
+	.categories {
+		width: 26em;
+	}
+	.footer {
+		font-size: 1.6em;
+	}
 }

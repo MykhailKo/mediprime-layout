@@ -907,4 +907,26 @@ only screen and (max-device-aspect-ratio: 2/3)
 	.nov-desc {
 		font-size: 1.5em;
 	}
+	.info-graph-icon {
+		font-size: 1.4em;
+	}
+	.form-sec {
+		height: 38em;
+	}
+	.form-title {
+		height: 7em;
+		font-size: 1.7em;
+		padding-left: 1em;
+	}
+	.contact-form input, textarea {
+		font-size: 1.4em;
+	}
+	.contact-form {
+		width: 100vw;
+		justify-content: center;
+	}
+	#send {
+		font-size: 1.5em;
+		border-width: 0.1em;
+	}
 }
