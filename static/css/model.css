@@ -407,4 +407,10 @@ only screen and (max-device-aspect-ratio: 2/3)
 	.breadcrums-sec li a {
 		font-size: 1.3em;
 	}
+	.main-header {
+		margin-top: -2px;
+	}
+	.main-menu {
+		top: 5.95em;
+	}
 }
