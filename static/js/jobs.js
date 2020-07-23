@@ -1,4 +1,6 @@
 $(document).ready(function(){
+
+	// animating jobs accardion
 	let jobs_height = [];
 	let em = parseInt($('html').css('font-size'));
 	$('.job-item-info').each(function(){
@@ -26,4 +28,20 @@ $(document).ready(function(){
 		$(elem).parent().children('.job-item-thumbnail').children('i').removeClass('fa-folder-open');
 		$(elem).parent().children('.job-item-thumbnail').children('i').addClass('fa-folder');
 	}
+
+	// jobs form validation
+
+	$('.send-application').on('click', function(event){
+		if(
+			$('#fullname').val() == '' ||
+			$('#portfolio').val() == '' ||
+			$('#email').val() == '' ||
+			$('#phone').val() == '' ||
+			$('#job').val() == null 
+		){
+			alert("Заполните все поля формы перед отпрвкой!");
+		}else {
+			jQuery(this).attr('type', 'submit');
+		}
+	});
 });

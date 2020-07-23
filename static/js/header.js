@@ -39,7 +39,18 @@ $(document).ready(function(){
 	// animating product menu
 	let em = parseInt($('html').css('font-size'));
 	let item_height = parseInt($('#products').children('.main-cat').children('li').css('font-size'));
-	let height_p = 4.5*em + $('#products').children('.main-cat').children('li').length * item_height * 1.5 + em;
+	let height_p, height_c;
+	if(
+		window.matchMedia("(max-device-aspect-ratio: 9/16)").matches ||
+		window.matchMedia("(max-device-aspect-ratio: 9/18)").matches ||
+		window.matchMedia("(max-device-aspect-ratio: 2/3)").matches
+	){
+		height_p = 4.5*em + $('#products').children('.main-cat').children('li').length * item_height * 1.5 + 2.5*em;
+		height_c = 4.5*em + $('#company').children('.main-cat').children('a').length * item_height * 1.5 + 2.5*em;
+	}else {
+		height_p = 4.5*em + $('#products').children('.main-cat').children('li').length * item_height * 1.5 + em;
+		height_c = 4.5*em + $('#company').children('.main-cat').children('a').length * item_height * 1.5 + em;
+	}
 	$('#prod-men').on('click', function(){
 		closeBigMenu($('#company'));
 		menu_c_shown = false;
@@ -58,7 +69,6 @@ $(document).ready(function(){
 	});
 	
 	// animating company menu
-	let height_c = 4.5*em + $('#company').children('.main-cat').children('a').length * item_height * 1.5 + em;
 	$('#company-men').on('click', function(){
 		closeBigMenu($('#products'));
 		menu_p_shown = false;
